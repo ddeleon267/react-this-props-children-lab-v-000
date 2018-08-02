@@ -16,8 +16,5 @@ class ThemedDecoration extends React.Component {
   }
 }
 
-ThemedDecoration.defaultProps = {
-
-};
 
 export default ThemedDecoration;
