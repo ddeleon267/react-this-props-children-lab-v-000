@@ -4,11 +4,15 @@ import ReactDOM from 'react-dom';
 
 class ThemedDecoration extends React.Component {
   render() {
+    const childrenWithExtraProp = React.Children.map(this.props.children, child => React.cloneElement(child, {
+      className: this.props.theme,
+    }));
+
     return (
-      <div className="themed-decorations">
-       {this.props.children.map(child => <div className="heaven">{child}</div>)}
-     </div>
-    )
+      <div>
+        {childrenWithExtraProp}
+      </div>
+    );
   }
 }
 
